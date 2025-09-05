@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        function loadGame(gameUrl) {
+            document.getElementById("game-container").style.display = "flex";
+            document.getElementById("game-frame").src = gameUrl;
+        }
+        
+        function closeGame() {
+            document.getElementById("game-container").style.display = "none";
+            document.getElementById("game-frame").src = "";
+        }
+        function toggleFullscreen() {
+            let gameFrame = document.getElementById("game-frame");
+
+            if (!document.fullscreenElement) {
+                if (gameFrame.requestFullscreen) {
+                    gameFrame.requestFullscreen();
+                } 
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+    </script>
+</head>
+<body class="body2">
+    <div class="sidebar">
+        <div class="logo"><img src="orgLogo.png" alt="GameZone"></div>
+        <ul>
+            <li class="active">All</li>
+            <li>Racing</li>
+            <li>Shooting</li>
+            <li>Arcade</li>
+        </ul>
+    </div>
+    <nav class="topbar">
+        <div class="brand-logo">GameZone</div>
+        <ul class="topbar-links">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html" id="logout" style="border: none; background: none; padding: 5px 10px; cursor: pointer; text-decoration: none; color: inherit;">Logout</a></li>
+        </ul>
+    </nav>
+    <div id="Home" class="main-content">
+        <section class="featured">
+            <h1>Welcome to GameZone</h1>
+            <p>Play the best online games for free!</p>
+        </section>
+        <section class="game-grid">
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/games/among-us/')"><img src="https://th.bing.com/th/id/OIP.UB5iOQqSLHPJvvGm2Sq_BAHaHa?rs=1&pid=ImgDetMain" alt="Among Us"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/city-bike-stunt-2/')"><img src="https://th.bing.com/th/id/OIP.ITlyg859pyo9l7AmoQJBZgHaHa?pid=ImgDet&w=195&h=195&c=7&dpr=1.4" alt="Moto X3M"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/slope-3/')"><img src="https://th.bing.com/th/id/OIP.D2dvRBlWQ1d0GkcWmyqMwgHaHa?w=175&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="Slope"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/two-ball-3d-dark/')"><img src="https://ubg365.github.io/thumbs/two-ball-3d-dark.png" alt="two-ball-3d-dark"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/drive-mad/')"><img src="https://ubg365.github.io/thumbs/drive-mad.png" alt="drive-mad"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/fnaf/')"><img src="https://ubg365.github.io/thumbs/fnaf.png" alt="fnaf"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/maze-planet-3d/')"><img src="https://ubg365.github.io/thumbs/maze-planet-3d.png" alt="maze-planet-3d"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/stack-bump-3d/')"><img src="https://ubg365.github.io/thumbs/stack-bump-3d.png" alt="stack-bump-3d"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/stack/')"><img src="https://ubg365.github.io/thumbs/stack.png" alt="stack"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/sniper-gun-shooting/')"><img src="https://ubg365.github.io/thumbs/sniper-gun-shooting.png" alt="sniper-gun-shooting"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/real-city-driving-2/')"><img src="https://ubg365.github.io/thumbs/real-city-driving-2.png" alt="real-city-driving-2"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/death-run-3d/')"><img src="https://ubg365.github.io/thumbs/death-run-3d.png" alt="death-run-3d"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/super-mario-64/')"><img src="https://ubg365.github.io/hot-games/thumbs/super-mario-64.png" alt="super-mario-64"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/tomb-runner/')"><img src="https://ubg365.github.io/hot-games/thumbs/tomb-runner.png" alt="tomb-runner"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/street-fighter/')"><img src="https://ubg365.github.io/new-games/thumbs/street-fighter.png" alt="street-fighter"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/shape-shift/')"><img src="https://ubg365.github.io/new-games/thumbs/shape-shift.png" alt="shape-shift"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/car-climb-racing/')"><img src="https://ubg365.github.io/new-games/thumbs/car-climb-racing.png" alt="car-climb-racing"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/exo/')"><img src="https://ubg365.github.io/thumbs/exo.png" alt="exo"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/4x4-drive-offroad/')"><img src="https://ubg365.github.io/hot-games/thumbs/4x4-drive-offroad.png" alt="4x4-drive-offroad"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/fruits-cut-3d/')"><img src="https://ubg365.github.io/new-games/thumbs/fruits-cut-3d.png" alt="fruits-cut-3d"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/cubito-mayhem/')"><img src="https://ubg365.github.io/hot-games/thumbs/cubito-mayhem.png" alt="cubito-mayhem"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/cars-lightning-speed/')"><img src="https://ubg365.github.io/new-games/thumbs/cars-lightning-speed.png" alt="cars-lightning-speed"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/two-neon-boxes/')"><img src="https://ubg365.github.io/hot-games/thumbs/two-neon-boxes.png" alt="two-neon-boxes"></div>
+            <div class="game-item" onclick="loadGame('https://ubg365.github.io/bubble-shooter/')"><img src="https://ubg365.github.io/hot-games/thumbs/bubble-shooter.png" alt="bubble-shooter"></div>
+        </section>
+    </div>
+</body>
+<section id="game-container" style="display: none; text-align: center; margin-top: 20px; position: relative;">
+    <h2>Now Playing</h2>
+    <button onclick="closeGame()" style="margin-bottom: 10px; padding: 5px 10px; background-color: red; color: white; border: none; cursor: pointer;">Close Game</button>
+    
+    <div style="position: relative; display: inline-block;">
+        
+        <button id="fullscreen-btn" onclick="toggleFullscreen()" style="position: absolute; top: 10px; right: 10px; padding: 5px 10px; background-color: rgba(0, 0, 0, 0.7); color: white; border: none; cursor: pointer; z-index: 10; font-size: 18px; border-radius: 5px;">
+            ⛶
+        </button>
+
+        <iframe id="game-frame" width="800" height="500" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
+<div id="about" class="about-section">
+    <h1>About GameZone</h1>
+    <p>Welcome to GameZone, your ultimate destination for playing free online games! Whether you're a fan of action-packed shooters, thrilling racing games, or classic arcade fun, we’ve got something for everyone. GameZone brings together a collection of exciting browser-based games that you can play instantly, without any downloads or installations.
+        With an easy-to-navigate interface and a seamless game-loading experience, GameZone makes it simple to dive into your favorite titles. Just click, play, and enjoy! Plus, with our fullscreen mode, you can get fully immersed in the action.
+        Join us and start your gaming adventure today—because at GameZone, the fun never stops! 🎮🔥</p>
+</div>
+<section id="contact" class="contact-container">
+    <div class="contact-form-section">
+        <h1>Contact Us</h1>
+        <p>Have questions or feedback? Feel free to reach out to us!</p>
+        <form class="contact-form" id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="contact-details">
+        <h1>Contact Details</h1>
+        <p><strong>📍 Address:</strong> 123 Gaming Street, Virtual City, 45678</p>
+        <p><strong>📞 Phone:</strong> +1 234-567-890</p>
+        <p><strong>📧 Email:</strong> support@gamezone.com</p>
+        <p><strong>⏰ Working Hours:</strong> Mon - Fri: 9 AM - 6 PM</p>
+    </div>
+</section>
+
+<script>
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const name = this.elements['name'].value;
+            const email = this.elements['email'].value;
+            const message = this.elements['message'].value;
+
+            try {
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, message })
+                });
+
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    contactForm.reset();
+                } else {
+                    alert('Failed to send message. Please try again later.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }
+        });
+    }
+</script>
+</html>

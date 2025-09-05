@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="./orgLogo.png" alt="GameZone Logo" class="login-page-logo">
+    
+    <h1>GAME ZONE</h1>
+    <div class="container">
+        <div class="register">
+            <h2>Register</h2>
+            <form id="registerForm" action="/register">
+                <input name="name" type="text" id="regName" placeholder="Full Name" required>
+                <input name="email" type="email" id="regEmail" placeholder="Email" required>
+                <input name="password" type="password" id="regPassword" placeholder="Password" required>
+                <button name="reg" type="submit">Register</button>
+            </form>
+        </div>
+        <div class="divider">
+            <div class="vertical-line"></div>
+            <p class="or">OR</p>
+            <div class="vertical-line"></div>
+        </div>
+        <div class="login">
+            <h2>Login</h2>
+            <form id="loginForm" action="/post" method="post">
+                <input name="name" type="text" id="loginUser" placeholder="Username" required>
+                <input name="password" type="password" id="loginPassword" placeholder="Password" required>
+                <button name="login" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

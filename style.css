@@ -1,0 +1,421 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f0f0f0;
+    background: #121212;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* NEW: Styling for the logo on the login/register page */
+.login-page-logo {
+    display: block; 
+    margin: 30px auto 0;
+    width: 80px;
+    height: auto;
+    opacity: 0.7; 
+    transition: opacity 0.3s ease;
+}
+
+.login-page-logo:hover {
+    opacity: 1; 
+}
+
+
+/* Styling for the login and registration page */
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 80px;
+    text-align: center;
+    color: #ffcc00;
+    text-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+    letter-spacing: 5px;
+    margin: 40px 0 20px; 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 70vh;
+    padding: 20px;
+    gap: 40px;
+}
+
+.register, .login {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register:hover, .login:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #ffcc00;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+
+button {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    background: #ffcc00;
+    color: #121212;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: #ffdb4d;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+}
+
+.divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1px;
+}
+
+.or {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px 15px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Game Page Styles */
+.body2 {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.sidebar {
+    width: 90px;
+    background: #0d0d0d;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    border-right: 2px solid #333;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .logo img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.sidebar .logo img:hover {
+    transform: scale(1.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.sidebar ul li {
+    text-align: center;
+    padding: 15px;
+    color: #999;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar ul li:hover, .sidebar ul .active {
+    background: #2a2a2a;
+    color: #ffcc00;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: rgba(13, 13, 13, 0.8);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    margin-left: 110px; 
+    position: fixed;
+    top: 0;
+    width: calc(100% - 110px);
+    z-index: 11;
+    border-bottom: 2px solid #333;
+}
+
+.brand-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.topbar-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.topbar-links a:hover {
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+#logout {
+    color: #ff6600; 
+    font-weight: bold;
+}
+
+.main-content {
+    margin-left: 110px; 
+    padding: 100px 30px 30px;
+    background: #1e1e1e;
+}
+
+.featured h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+    color: #ffcc00;
+    text-shadow: 0 0 15px #ffcc00, 0 0 25px orange;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.featured p {
+    font-size: 20px;
+    color: #ccc;
+    font-style: italic;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    padding: 30px 0;
+}
+
+.game-item {
+    background: #2a2a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.game-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.game-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Game container and fullscreen button styles */
+#game-container {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#game-container h2 {
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+#game-frame {
+    width: 80vw;
+    height: 70vh;
+    max-width: 1280px;
+    max-height: 720px;
+    border: 3px solid #ffcc00;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+    border-radius: 10px;
+}
+
+.close-btn {
+    background-color: #ff3300;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #cc2200;
+    transform: scale(1.05);
+}
+
+#fullscreen-btn {
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s, background 0.3s;
+}
+
+#fullscreen-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+/* About and Contact section styles */
+.about-section, .contact-container {
+    background: #2a2a2a;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    margin-left: 140px;
+    max-width: calc(100% - 180px);
+}
+
+.about-section h1, .contact-form-section h1, .contact-details h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.about-section p {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    border-radius: 8px;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background: #ff6600;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ff3300;
+    transform: scale(1.05);
+}
+
+.contact-details {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-details p {
+    color: #ccc;
+    font-size: 16px;
+}

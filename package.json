@@ -1,0 +1,21 @@
+{
+  "name": "gamezonedb",
+  "version": "1.0.0",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server.js"
+  },
+  "keywords": [],
+  "author": "Prasanna V",
+  "license": "ISC",
+  "description": "Package contains data of GameZone",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^4.21.2",
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.0",
+    "nodemailer": "^7.0.6",
+    "path": "^0.12.7"
+  }
+}
